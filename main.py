@@ -42,6 +42,7 @@ form = """
 
 @app.route("/")
 def index():
+    #form = form.format()
     return form
 
 @app.route("/hello", methods=['POST'])
@@ -51,7 +52,10 @@ def hello():
     num = int(num)
 
     code = rotate_string(text, num)
+    #form = form.format('<h1>' + code + '</h1>')
+
     return '<h1>' + code + '</h1>'
+
 
 
 
